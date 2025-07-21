@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoadLink Dispatch</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #1e293b;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img.logo {
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+    nav {
+      background-color: #0f172a;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem;
+      gap: 1rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background-color: #334155;
+    }
+    .slider {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      height: 300px;
+      margin-bottom: 2rem;
+    }
+    .slider img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      animation: slide 12s infinite;
+    }
+    @keyframes slide {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+    .contact-info {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+    .services-list, .benefits-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .services-list li::before {
+      content: "\f4de";
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      margin-right: 10px;
+    }
+    .benefits-list li::before {
+      content: "\f058";
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      margin-right: 10px;
+      color: green;
+    }
+    .cta {
+      background: #0ea5e9;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+      border-radius: 8px;
+    }
+    .cta a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .contact-form button {
+      background: #1e293b;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #1e293b;
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .dark-mode {
+      background: #111;
+      color: #ddd;
+    }
+    .dark-mode header,
+    .dark-mode nav,
+    .dark-mode .cta,
+    .dark-mode footer {
+      background: #000;
+    }
+    .toggle-mode {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #1e293b;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <img class="logo" src="https://i.imgur.com/2bvabZg.png" alt="RoadLink Logo" />
+    <h1>RoadLink Dispatch</h1>
+    <p>Your Trusted Partner in Nationwide Truck Dispatching</p>
+    <div class="contact-info">
+      📞 +1 (484) 850-8797<br />
+      📧 <a href="mailto:roadlinkdispatch35@gmail.com" style="color: #38bdf8;">roadlinkdispatch35@gmail.com</a>
+    </div>
+  </header>
+
+  <nav data-aos="fade-up">
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="slider" data-aos="zoom-in">
+    <img src="https://images.unsplash.com/photo-1607773911161-6eecb27e6061" alt="Truck 1">
+  </div>
+
+  <section id="services" data-aos="fade-up">
+    <h2>🚚 Dispatch Services</h2>
+    <ul class="services-list">
+      <li>Dry Van</li>
+      <li>Reefer</li>
+      <li>Power Only</li>
+      <li>Flatbed</li>
+      <li>Hotshot</li>
+      <li>Box Truck</li>
+      <li>Cargo & Sprinter Van</li>
+    </ul>
+  </section>
+
+  <section id="why" data-aos="fade-right">
+    <h2>Why RoadLink?</h2>
+    <ul class="benefits-list">
+      <li>Fast, Reliable Load Booking</li>
+      <li>24/7 Driver Support</li>
+      <li>Top-Dollar Rate Negotiation</li>
+      <li>Clear, No-BS Communication</li>
+      <li>Consistent Loads. On-Time Pay.</li>
+    </ul>
+  </section>
+
+  <div class="cta" data-aos="zoom-in">
+    <h2>Let’s Hit the Road</h2>
+    <p>Owner-operator or small fleet? We’ll keep your trucks loaded and earning.</p>
+    <p>
+      📧 <a href="mailto:roadlinkdispatch35@gmail.com">roadlinkdispatch35@gmail.com</a><br />
+      📞 +1 (484) 850-8797
+    </p>
+  </div>
+
+  <section id="contact" class="contact-form" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/xwpqvjnl" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone Number" />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer data-aos="fade-in">
+    &copy; 2025 RoadLink Dispatch. All rights reserved.
+  </footer>
+
+  <button class="toggle-mode" onclick="document.body.classList.toggle('dark-mode')">
+    🌓
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+</body>
+</html>
